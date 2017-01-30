@@ -25,6 +25,17 @@ describe('Javabuzz', function() {
   });
 
   describe('returns Fizz and Buzz in right situations', function() {
-    
+    it('"Java" when a number is divisible by 3', function() {
+      expect(javabuzz.play(3)).toEqual("Java");
+    });
+    it('"Buzz" when a number is divisible by 5', function() {
+      expect(javabuzz.play(5)).toEqual("Buzz");
+    });
+    it('"Javabuzz" when a number is divisible by 15', function() {
+      expect(javabuzz.play(15)).toEqual("Javabuzz");
+    });
+    it('"number" when a number is not divisible by 3, 5 or 15', function() {
+      expect(javabuzz.play(2)).toEqual(2);
+    });
   });
 });
